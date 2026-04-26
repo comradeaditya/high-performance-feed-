@@ -1,17 +1,40 @@
-# high_performance_feed
+high_performance_feed
 
-A new Flutter project.
+A Flutter project for a high performance social media feed.
 
-## Getting Started
+Overview
 
-This project is a starting point for a Flutter application.
+This app shows an infinite scrolling feed with focus on speed, smooth UI, and low memory usage.
+Built using Flutter, Riverpod, and Supabase.
 
-A few resources to get you started if this is your first Flutter project:
+Features
+Infinite scrolling (pagination)
+Pull to refresh
+Optimized UI using RepaintBoundary
+Memory optimized image loading
+Hero animation to detail screen
+Like button with instant update (optimistic UI)
+Handles offline and fast multiple clicks
+Tech Stack
+Flutter
+Riverpod
+Supabase (Database, Storage, RPC)
+Performance
+Used RepaintBoundary to reduce GPU load
+Used cacheWidth / memCacheWidth to control image size
+Used thumbnail images in feed
+Smooth scrolling without lag
+Like System
+UI updates instantly
+Backend sync using Supabase RPC
+Handles rapid clicks safely
+Reverts UI if request fails
+How to Run
+Clone project
+Add Supabase keys
+Run:
+flutter pub get
+flutter run
+Notes
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This project focuses on performance, clean UI, and proper state management.
