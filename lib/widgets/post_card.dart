@@ -25,7 +25,7 @@ class PostCard extends StatelessWidget {
 
     return RepaintBoundary(
       child: GestureDetector(
-        onTap: onCardTap, // 🔥 full card clickable
+        onTap: onCardTap, //full card clickable
         child: Container(
           margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
           decoration: BoxDecoration(
@@ -34,7 +34,7 @@ class PostCard extends StatelessWidget {
             boxShadow: [
               BoxShadow(
                 color: Colors.black.withOpacity(0.15),
-                blurRadius: 25, // 🔥 heavier for GPU test
+                blurRadius: 25, //heavier for GPU test
                 spreadRadius: 2,
                 offset: const Offset(0, 10),
               ),
@@ -43,9 +43,9 @@ class PostCard extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // 🔥 HERO IMAGE
+              //HERO IMAGE
               Hero(
-                tag: post.id, // ✅ FIXED TAG
+                tag: post.id, //FIXED TAG
                 child: ClipRRect(
                   borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(12),
@@ -57,7 +57,7 @@ class PostCard extends StatelessWidget {
                     height: 300,
                     fit: BoxFit.cover,
 
-                    // 🔥 PERFECT MEMORY MATCH
+                    //PERFECT MEMORY MATCH
                     memCacheWidth: cacheSize,
                     memCacheHeight: cacheSize,
 
@@ -77,7 +77,7 @@ class PostCard extends StatelessWidget {
                 ),
               ),
 
-              // 🔥 INFO SECTION
+              //INFO SECTION
               Padding(
                 padding: const EdgeInsets.all(12),
                 child: Column(

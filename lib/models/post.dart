@@ -5,7 +5,7 @@ class Post {
   final String mediaRawUrl;
   final int likeCount;
   final DateTime createdAt;
-  final bool isLiked; // ✅ ADDED
+  final bool isLiked; // ADDED
 
   Post({
     required this.id,
@@ -14,7 +14,7 @@ class Post {
     required this.mediaRawUrl,
     required this.likeCount,
     required this.createdAt,
-    required this.isLiked, // ✅ ADDED
+    required this.isLiked, // ADDED
   });
 
   // Convert Supabase JSON to Post object
@@ -26,11 +26,11 @@ class Post {
       mediaRawUrl: json['media_raw_url'] as String? ?? '',
       likeCount: json['like_count'] as int? ?? 0,
       createdAt: DateTime.parse(json['created_at'] as String),
-      isLiked: json['is_liked'] as bool? ?? false, // ✅ ADDED
+      isLiked: json['is_liked'] as bool? ?? false, // ADDED
     );
   }
 
-  // Convert Post to JSON for Supabase
+  // Converts Post to JSON for Supabase
   Map<String, dynamic> toJson() {
     return {
       'id': id,
@@ -39,7 +39,7 @@ class Post {
       'media_raw_url': mediaRawUrl,
       'like_count': likeCount,
       'created_at': createdAt.toIso8601String(),
-      // ❌ DO NOT send isLiked to DB (it's computed)
+      //DO NOT send isLiked to DB (it's computed)
     };
   }
 }

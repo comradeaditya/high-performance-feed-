@@ -73,12 +73,12 @@ class _DetailScreenState extends State<DetailScreen> {
       ),
       body: Column(
         children: [
-          // 🔥 HERO + TIERED LOADING
+          // HERO + TIERED LOADING
           Hero(
             tag: widget.post.id, // MUST match PostCard
             child: Stack(
               children: [
-                // 🟡 Thumbnail (instant display)
+                // Thumbnail (instant display)
                 CachedNetworkImage(
                   imageUrl: widget.post.mediaThumbUrl,
                   width: double.infinity,
@@ -87,7 +87,7 @@ class _DetailScreenState extends State<DetailScreen> {
                   memCacheWidth: cacheSize ~/ 4, // smaller for thumb
                 ),
 
-                // 🟢 HD Image (fade in)
+                // HD Image (fade in)
                 AnimatedOpacity(
                   duration: const Duration(milliseconds: 400),
                   opacity: isHdLoaded ? 1 : 0,
@@ -105,7 +105,7 @@ class _DetailScreenState extends State<DetailScreen> {
 
           const SizedBox(height: 16),
 
-          // 🔽 DOWNLOAD BUTTON
+          // DOWNLOAD BUTTON
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: ElevatedButton.icon(
@@ -130,7 +130,7 @@ class _DetailScreenState extends State<DetailScreen> {
 
           const SizedBox(height: 20),
 
-          // 📝 POST INFO
+          // POST INFO
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Text(
